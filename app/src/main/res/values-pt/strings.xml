@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dicionário Galnet</string>
+    <string name="edit_message">Palavra em</string>
+    <string name="button_send">Pesquisa</string>
+
+    <string-array name="language_array">
+        <item>Galego</item>
+        <item>Português</item>
+        <item>Catalão</item>
+        <item>Basco</item>
+        <item>Espanhol</item>
+        <item>Inglês</item>
+        <item>Alemão</item>
+        <item>Latim</item>
+        <item>Italiano</item>
+        <!--<item>Francês</item>-->
+        <item>Chinês simplificado</item>
+        <item>Chinês tradicional</item>
+    </string-array>
+    <string name="info">Informação</string>
+    <string name="iraweb">"Versão web "</string>
+    <!--<string name="refs">Referências</string>-->
+    <string name="contacto">Informação de contato:</string>
+    <string name="share">Partilhar ligação</string>
+    <string name="help">Ajuda</string>
+    <string name="exposicion">Símbolos usados no dicionário:</string>
+
+    <string name="abreviaturas">\n\n
+        🄲 Linguagem culta\n
+        🅃 Ling. especializada/técnica\n
+        🅂 Linguagem padrão/standard\n
+        🄵 Ling. coloquial/familiar\n
+        🅅 Linguagem vulgar\n
+        🄳 Dialectalismo não normativo\n
+
+    </string>
+    <string name="recuncar">Nenhum resultado\nPesquisar de novo</string>
+</resources>

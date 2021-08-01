@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Galnet Dictionary</string>
+    <string name="edit_message">Word in</string>
+    <string name="button_send">Search</string>
+
+    <string-array name="language_array">
+        <item>Galician</item>
+        <item>Portuguese</item>
+        <item>Catalan</item>
+        <item>Basque</item>
+        <item>Spanish</item>
+        <item>English</item>
+        <item>German</item>
+        <item>Latin</item>
+        <item>Italian</item>
+        <!--<item>French</item>-->
+        <item>Simplified Chinese</item>
+        <item>Traditional Chinese</item>
+    </string-array>
+    <string name="info">Information</string>
+    <string name="iraweb">Web version</string>
+    <!--<string name="refs">References</string>-->
+    <string name="contacto">Contact information:</string>
+    <string name="share">Share link</string>
+    <string name="help">Help</string>
+    <string name="exposicion">Key to symbols used in this dictionary:</string>
+
+    <string name="abreviaturas">\n\n
+        🄲 Formal/cultivated register\n
+        🅃 Technical/specialised register\n
+        🅂 Neutral/standard register\n
+        🄵 Casual/familiar register\n
+        🅅 Vulgar register\n
+        🄳 Non-normative dialectal variety\n
+
+    </string>
+    <string name="recuncar">Nothing found\nSearch again</string>
+</resources>

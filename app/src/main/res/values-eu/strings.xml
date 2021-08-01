@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Galnet Hiztegia</string>
+    <string name="button_send">Bilatu</string>
+    <string name="edit_message">Hizkuntza:</string>
+
+    <string-array name="language_array">
+        <item>Galiziera</item>
+        <item>Portuguesa</item>
+        <item>Katalana</item>
+        <item>Euskara</item>
+        <item>Espainiera</item>
+        <item>Ingelesa</item>
+        <item>Alemana</item>
+        <item>Latina</item>
+        <item>Italiera</item>
+        <!--<item>Frantsesa</item>-->
+        <item>Txinera sinplifikatua</item>
+        <item>Txinera tradizionala</item>
+    </string-array>
+
+    <string name="recuncar">Ez da emaitzarik aurkitu\nBilatu berriro</string>
+
+    <string name="help">Laguntza</string>
+    <string name="info">Informazio orokorra</string>
+    <string name="iraweb">Web bertsioa</string>
+    <string name="share">Partekatu esteka</string>
+
+    <string name="exposicion">Hiztegian erabilitako sinboloak:</string>
+
+    <string name="abreviaturas">\n\n
+        🄲 Erregistro jasoa\n
+        🅃 Err. espezifikoa/teknikoa\n
+        🅂 Erregistro estandarra\n
+        🄵 Lagunarteko erregistroa\n
+        🅅 Behe-mailako erregistroa\n
+        🄳 Dialektalismo ez-arautua\n
+
+    </string>
+
+    <string name="contacto">Kontaktua:</string>
+
+    <string name="datos" translatable="false">\n\n
+        Xavier Gómez Guinovart\n
+    📧  xgg2021@gmail.com\n
+    🌐  http://sli.uvigo.gal\n
+    </string>
+
+
+  <!--  <string name="text_expanded" translatable="false">Expanded</string>
+    <string name="text_collapsed" translatable="false">Collapsed</string>-->
+
+
+
+
+
+<!--    http://androidbook.blogspot.com/2009/08/referring-to-android-resources-using.html
+    https://stackoverflow.com/questions/38097973/visualizing-an-image-from-html-fromhtml-in-a-textviewthe-image-must-be-in-the-s-->
+
+<!--    <string-array name="string_array_alcohol">
+        <item><![CDATA[<p><img src="eng.png"/> harvest, harvest time</p>
+    <p><b> Def:</b> <i>[period]</i> The season for gathering crops</p>
+    <p><img src="glg.png"/> colleita, recolleita</p>
+        <p><img src="por.png"/> colheita</p>
+     <p><img src="cat.png"/> collita</p>
+    <p><img src="eus.png"/> uztaro</p>
+    <p><img src="spa.png"/> cosecha, tiempo de cosecha</p>
+    <p><img src="lat.png"/> messis</p>
+    <p><img src="ita.png"/> colta, mietitura</p>
+    <p><img src="zho.png"/> 收获期</p>
+        <p><img src="qcn.png"/> 收获期</p>]]></item>
+
+</string-array>
+
+    <string-array name="string_array_coffee">
+        <item><![CDATA[<b>Espresso</b> <img src="fra.png"/>]]></item>
+        <item>GL Macchiato</item>
+        <item>Cappuccino</item>
+        <item>Cafe Latte</item>
+        <item>Ristretto</item>
+        </string-array>-->
+
+
+
+
+</resources>

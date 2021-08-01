@@ -1,0 +1,5 @@
+El Diccionari Galnet és un diccionari d'idiomes basat en WordNet amb traduccions i sinònims per a 10 llengües: gallec, portuguès, català, basc, espanyol, anglès, alemany, llatí, italià i xinès (xinès tradicional i xinès simplificat).
+
+Aquest diccionari d'idiomes presenta com a aplicació mòbil el repertorio lèxic de Galnet (http://sli.uvigo.gal/galnet/) que s'està desenvolupant en el Seminario de Lingüística Informática de la Universidade de Vigo (http://sli.uvigo.gal), on es pot consultar des de 2011. L'objectiu del desenvolupament de Galnet és la integració del lèxic gallec a la xarxa semàntica interlingüística de WordNet (https://wordnet.princeton.edu), seguint el model d'EuroWordNet. Galnet forma part del Multilingual Central Repository (http://adimen.si.ehu.es/web/MCR) i del Open Multilingual Wordnet (http://compling.hss.ntu.edu.sg/iliomw/omw). Els continguts de Galnet poden consultar-se amb diverses aplicacions web i poden també descarregar-se en format RDF o LMF amb llicència lliure (http://sli.uvigo.gal/download/SLI_Galnet/).
+
+Informació de contacte: Xavier Gómez Guinovart (xgg2021@gmail.com)

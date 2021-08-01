@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Dicionario Galnet</string>
+    <string name="button_send">Procura</string>
+    <string name="edit_message">Palabra en</string>
+
+    <string-array name="language_array">
+        <item>Galego</item>
+        <item>Portugués</item>
+        <item>Catalán</item>
+        <item>Vasco</item>
+        <item>Español</item>
+        <item>Inglés</item>
+        <item>Alemán</item>
+        <item>Latín</item>
+        <item>Italiano</item>
+        <!--<item>Francés</item>-->
+        <item>Chinés simplificado</item>
+        <item>Chinés tradicional</item>
+    </string-array>
+
+    <string name="recuncar">Ningún resultado\nProcurar de novo</string>
+
+    <string name="help">Axuda</string>
+    <string name="info">Información</string>
+    <!--<string name="refs">Referencias</string>-->
+    <string name="iraweb">Versión web</string>
+    <string name="share">Compartir ligazón</string>
+
+    <string name="exposicion">Símbolos usados no dicionario:</string>
+
+    <string name="abreviaturas">\n\n
+        🄲 Rexistro culto\n
+        🅃 Rex. especializado/técnico\n
+        🅂 Rexistro estándar\n
+        🄵 Rexistro coloquial/familiar\n
+        🅅 Rexistro vulgar\n
+        🄳 Dialectalismo non normativo\n
+
+    </string>
+
+    <string name="contacto">Información de contacto:</string>
+
+    <string name="datos" translatable="false">\n\n
+        Xavier Gómez Guinovart\n
+    📧  xgg2021@gmail.com\n
+    🌐  http://sli.uvigo.gal\n
+    </string>
+
+
+  <!--  <string name="text_expanded" translatable="false">Expanded</string>
+    <string name="text_collapsed" translatable="false">Collapsed</string>-->
+
+
+
+
+
+<!--    http://androidbook.blogspot.com/2009/08/referring-to-android-resources-using.html
+    https://stackoverflow.com/questions/38097973/visualizing-an-image-from-html-fromhtml-in-a-textviewthe-image-must-be-in-the-s-->
+
+<!--    <string-array name="string_array_alcohol">
+        <item><![CDATA[<p><img src="eng.png"/> harvest, harvest time</p>
+    <p><b> Def:</b> <i>[period]</i> The season for gathering crops</p>
+    <p><img src="glg.png"/> colleita, recolleita</p>
+        <p><img src="por.png"/> colheita</p>
+     <p><img src="cat.png"/> collita</p>
+    <p><img src="eus.png"/> uztaro</p>
+    <p><img src="spa.png"/> cosecha, tiempo de cosecha</p>
+    <p><img src="lat.png"/> messis</p>
+    <p><img src="ita.png"/> colta, mietitura</p>
+    <p><img src="zho.png"/> 收获期</p>
+        <p><img src="qcn.png"/> 收获期</p>]]></item>
+
+</string-array>
+
+    <string-array name="string_array_coffee">
+        <item><![CDATA[<b>Espresso</b> <img src="fra.png"/>]]></item>
+        <item>GL Macchiato</item>
+        <item>Cappuccino</item>
+        <item>Cafe Latte</item>
+        <item>Ristretto</item>
+        </string-array>-->
+
+
+
+
+</resources>

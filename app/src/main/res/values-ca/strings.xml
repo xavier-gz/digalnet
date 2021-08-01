@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diccionari Galnet</string>
+    <string name="edit_message">Paraula en</string>
+    <string name="button_send">Cerca</string>
+    <string-array name="language_array">
+        <item>Gallec</item>
+        <item>Portuguès</item>
+        <item>Català</item>
+        <item>Basc</item>
+        <item>Espanyol</item>
+        <item>Anglès</item>
+        <item>Alemany</item>
+        <item>Llatí</item>
+        <item>Italià</item>
+        <!--<item>Francès</item>-->
+        <item>Xinès simplificat</item>
+        <item>Xinès tradicional</item>
+    </string-array>
+    <string name="info">Informació</string>
+    <string name="iraweb" translatable="false">Versió web</string>
+    <!--<string name="refs">Referències</string>-->
+    <string name="contacto">Informació de contacte:</string>
+    <string name="share">Compartir enllaç</string>
+    <string name="help">Ajuda</string>
+    <string name="exposicion">Símbols usats en el diccionari:</string>
+
+    <string name="abreviaturas">\n\n
+        🄲 Registre culte\n
+        🅃 Reg. especialitzat/tècnic\n
+        🅂 Registre estàndard\n
+        🄵 Reg. col·loquial/familiar\n
+        🅅 Registre vulgar\n
+        🄳 Dialectalisme no normatiu\n
+
+    </string>
+    <string name="recuncar">Cap resultat\nCercar de nou</string>
+</resources>
+
