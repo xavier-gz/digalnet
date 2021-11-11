@@ -7,17 +7,14 @@ import android.os.Build;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,11 +37,6 @@ public class DisplayMessageActivity extends AppCompatActivity {
     private List<String> listDataGroup;
 
     private HashMap<String, List<String>> listDataChild;
-
-
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,27 +118,27 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         if (resultado == null) {
 
-            Intent refresh = new Intent(this, MainActivity.class);
-
-            overridePendingTransition( 0, 0);
-            startActivity(refresh);
-            overridePendingTransition( 0, 0);
-
-            Toast toast = Toast.makeText(this.getBaseContext(), getString(R.string.recuncar), Toast.LENGTH_SHORT);
-            LinearLayout layout = (LinearLayout) toast.getView();
-            if (layout.getChildCount() > 0) {
-                TextView tv = (TextView) layout.getChildAt(0);
-                tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-            }
+            Toast toast = Toast.makeText(this, getString(R.string.recuncar), Toast.LENGTH_LONG);
+            toast.getView();
             toast.show();
+
+/*            Intent refresh = new Intent(this, MainActivity.class);
+            startActivity(refresh);
+            finish();*/
+            Intent refresh = new Intent(this, MainActivity.class);
+            refresh.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(refresh);
+            finish();
 
         } else {
 
             Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
             setSupportActionBar(myToolbar);
 
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setHomeButtonEnabled(true);
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setHomeButtonEnabled(true);
+            }
 
             myToolbar.setTitle(getResources().getString(R.string.app_name));
             myToolbar.setNavigationIcon(R.drawable.search);
@@ -253,66 +245,55 @@ public class DisplayMessageActivity extends AppCompatActivity {
         @Override
         public boolean onOptionsItemSelected (MenuItem item){
             // Handle presses on the action bar items
-            switch (item.getItemId()) {
-                case R.id.share:
-                    shareTextUrl();
-                    return true;
+            int itemId = item.getItemId();
+            if (itemId == R.id.share) {
+                shareTextUrl();
+                return true;
+            } else if (itemId == R.id.help) {//popup window code here
 
-                case R.id.help:
-                    //popup window code here
+                // set the message to display
+                String axuda = getString(R.string.exposicion).concat(getString(R.string.abreviaturas));
 
-                    // set the message to display
-                    String axuda = getString(R.string.exposicion).concat(getString(R.string.abreviaturas));
+                // Linkify the message
+                final SpannableString u = new SpannableString(axuda);
+                Linkify.addLinks(u, Linkify.ALL);
 
-                    // Linkify the message
-                    final SpannableString u = new SpannableString(axuda);
-                    Linkify.addLinks(u, Linkify.ALL);
+                final AlertDialog f = new AlertDialog.Builder(this)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .setTitle(getString(R.string.help))
+                        .setMessage(u)
+                        .create();
 
-                    final AlertDialog f = new AlertDialog.Builder(this)
-                            .setPositiveButton(android.R.string.ok, null)
-                            .setTitle(getString(R.string.help))
-                            .setMessage(u)
-                            .create();
+                f.show();
 
-                    f.show();
+                return true;
+            } else if (itemId == R.id.info) {//popup window code here
 
-                    // Make the textview clickable. Must be called after show()
-                    ((TextView) f.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
+                // set the message to display
+                String mensaxe = getString(R.string.contacto).concat(getString(R.string.datos));
 
-                    return true;
+                // Linkify the message
+                final SpannableString t = new SpannableString(mensaxe);
+                Linkify.addLinks(t, Linkify.ALL);
 
-                case R.id.info:
-                    //popup window code here
+                final AlertDialog e = new AlertDialog.Builder(this)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .setTitle(getString(R.string.app_name))
+                        .setMessage(t)
+                        .create();
 
-                    // set the message to display
-                    String mensaxe = getString(R.string.contacto).concat(getString(R.string.datos));
+                e.show();
 
-                    // Linkify the message
-                    final SpannableString t = new SpannableString(mensaxe);
-                    Linkify.addLinks(t, Linkify.ALL);
+                // Make the textview clickable. Must be called after show()
+                 ((TextView) e.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 
-                    final AlertDialog e = new AlertDialog.Builder(this)
-                            .setPositiveButton(android.R.string.ok, null)
-                            .setTitle(getString(R.string.app_name))
-                            .setMessage(t)
-                            .create();
-
-                    e.show();
-
-                    // Make the textview clickable. Must be called after show()
-                    ((TextView) e.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
-
-                    return true;
-
-                case R.id.iraweb:
-                    Uri uri = Uri.parse("http://sli.uvigo.gal/digalnet/");
-                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
-                    return true;
-
-
-                default:
-                    return super.onOptionsItemSelected(item);
+                return true;
+            } else if (itemId == R.id.iraweb) {
+                Uri uri = Uri.parse("http://sli.uvigo.gal/digalnet/");
+                startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                return true;
             }
+            return super.onOptionsItemSelected(item);
         }
 
 

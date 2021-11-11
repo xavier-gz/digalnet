@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Spinner spinnerLanguages = findViewById(R.id.language_spinner);
-        ArrayAdapter<String> spinnerLanguagesArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.language_array));
+        ArrayAdapter<String> spinnerLanguagesArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.language_array));
         spinnerLanguages.setAdapter(spinnerLanguagesArrayAdapter);
 
 
@@ -114,36 +114,32 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
-        switch (item.getItemId()) {
-            case R.id.iraweb:
-                Uri uri = Uri.parse( "http://sli.uvigo.gal/digalnet/" );
-                startActivity( new Intent( Intent.ACTION_VIEW, uri ) );
-                return true;
+        int itemId = item.getItemId();
+        if (itemId == R.id.iraweb) {
+            Uri uri = Uri.parse("http://sli.uvigo.gal/digalnet/");
+            startActivity(new Intent(Intent.ACTION_VIEW, uri));
+            return true;
+        } else if (itemId == R.id.info) {// set the message to display
+            String mensaxe = getString(R.string.contacto).concat(getString(R.string.datos));
 
-            case R.id.info:
-                // set the message to display
-                String mensaxe = getString(R.string.contacto).concat(getString(R.string.datos));
+            // Linkify the message
+            final SpannableString t = new SpannableString(mensaxe);
+            Linkify.addLinks(t, Linkify.ALL);
 
-                // Linkify the message
-                final SpannableString t = new SpannableString(mensaxe);
-                Linkify.addLinks(t, Linkify.ALL);
+            final AlertDialog e = new AlertDialog.Builder(this)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setTitle(getString(R.string.app_name))
+                    .setMessage(t)
+                    .create();
 
-                final AlertDialog e = new AlertDialog.Builder(this)
-                        .setPositiveButton(android.R.string.ok, null)
-                        .setTitle(getString(R.string.app_name))
-                        .setMessage( t )
-                        .create();
+            e.show();
 
-                e.show();
+            // Make the textview clickable. Must be called after show()
+            ((TextView) e.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 
-                // Make the textview clickable. Must be called after show()
-                ((TextView)e.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
-
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
